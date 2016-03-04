@@ -1,0 +1,21 @@
+<h2>Add new hero:</h2>
+
+<form>
+    <label for="alias">Alias: </label>
+    <input type="text" id="alias" ng-model="alias" />
+
+    <label for="first_name">First Name: </label>
+    <input type="text" id="first_name" ng-model="first_name" />
+
+    <label for="last_name">Last Name: </label>
+    <input type="text" id="last_name" ng-model="last_name" />
+
+    <label for="city">City: </label>
+    <input type="text" id="city" ng-model="city" />
+
+    <select ng-model="primary_power" ng-options="power.power_name for power in superPowers">
+              <option value="">Select Power</option>
+    </select>
+
+    <button type="submit" id="go" class="btn-primary" ng-click="addHero()"> Add Hero</button>
+</form>

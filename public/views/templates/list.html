@@ -1,0 +1,16 @@
+<h2>{{message}}</h2>
+
+<select ng-model="primary_power" ng-options="power.power_name for power in superPowers">
+            <option value="">Select Power</option>
+            <option value="allPowers"> Get all the heroes</option>
+  </select>
+
+  <button type="submit" id="go" class="btn-primary" ng-click="findHeroes()"> Find Heros</button>
+
+  <h4>Power Selected: {{primary_power.power_name}}</h4>
+<h2>Your Heroes</h2>
+  <ul ng-repeat=" hero in onlyMatchingHeroes">
+    <li>
+      {{hero.alias}}, {{hero.first_name}}, {{hero.last_name}}, {{hero.city}}, {{hero.primary_power}}
+    </li>
+  </ul>
